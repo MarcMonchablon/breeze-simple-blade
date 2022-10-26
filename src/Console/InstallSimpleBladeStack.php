@@ -28,6 +28,9 @@ trait InstallSimpleBladeStack
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/simple-blade/resources/views/auth', resource_path('views/auth'));
         copy(__DIR__.'/../../stubs/simple-blade/resources/views/dashboard.blade.php', resource_path('views/dashboard.blade.php'));
 
+        // Breeze.css
+        copy(__DIR__.'/../../stubs/simple-blade/public/breeze.css', base_path('public/breeze.css'));
+
         // Tests...
         $this->installTests();
 
